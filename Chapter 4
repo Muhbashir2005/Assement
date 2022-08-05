@@ -1,0 +1,149 @@
+using System;
+
+namespace Chapter4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+           /* /*1. Write a program that reads from the console three numbers of type int and prints their sum.*/
+            Console.WriteLine(" Enter First Number :");
+            int firstNumbers = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine(" Enter Second Number :");
+            int secondNumbers = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine(" Enter Third Number :");
+            int thirdNumbers = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine($"{firstNumbers + secondNumbers + thirdNumbers}");
+            /*2. Write a program that reads from the console the radius "r" of a circle and prints its perimeter and area.*/
+            Console.WriteLine("Enter Radius :");
+            int radius = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine($"Area :{radius * radius * Math.PI} Perimeter :{2 * Math.PI * radius}");
+            /*3. A given company has name, address, phone number, fax number, website and manager. The manager has name, surname and phone number. Write a program that reads information about the company and its manager and then prints it on the console.*/
+            Console.WriteLine("Enter Company Name :");
+            string comName = Console.ReadLine();
+            Console.WriteLine("Enter Address :");
+            string address = Console.ReadLine();
+            Console.WriteLine("Enter Phone number :");
+            int phoneNumber = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter Fax number :");
+            int faxNumber =Convert.ToInt32 (Console.ReadLine());
+            Console.WriteLine("Enter Website :");
+            string webSite = Console.ReadLine();
+            Console.WriteLine("Enter Manager Name :");
+            string manName = Console.ReadLine();
+            Console.WriteLine("Enter Manager  Surname :");
+            string surname = Console.ReadLine();
+            Console.WriteLine("Enter Manager Phone Number :");
+            int manPhoneNumber = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine($"COMPANY NAME :{comName} ADDRESS :{address} PHONE NUMBER :{phoneNumber} FAX NUMBER : {faxNumber} WEBSITE :{webSite} MANAGER NAME :{manName} MANAGER SURNAME {surname} MANAGER PHONE NUMBER :{manPhoneNumber} ");
+            /*4. Write a program that prints three numbers in three virtual columns on the console. Each column should have a width of 10 characters and the numbers should be left aligned. The first number should be an integer in hexadecimal; the second should be fractional positive; and the third – a negative fraction. The last two numbers have to be rounded to the second decimal place.*/
+            /*5. Write a program that reads from the console two integer numbers (int) and prints how many numbers between them exist, such that the remainder of their division by 5 is 0. Example: in the range (14, 25) there are 3 such numbers: 15, 20 and 25.*/
+            Console.WriteLine($"Enter a number :");
+            int num1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine($"Enter another number :");
+            int num2 = Convert.ToInt32(Console.ReadLine());
+            for (int num1 = 0; num1 <= num2; num1++)
+            {
+             Console.WriteLine(num1 % 5 == 0 ? num1);   
+            }
+            /*6. Write a program that reads two numbers from the console and prints the greater of them. Solve the problem without using conditional statements.*/
+            Console.WriteLine("Enter a number :");
+            int numer1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter a second number :");
+            int numer2 = Convert.ToInt32(Console.ReadLine());
+            if  (numer1 > numer2)
+            {
+                Console.WriteLine (numer1);
+            }
+            Console.WriteLine(numer2);
+            /*7. Write a program that reads five integer numbers and prints their sum. If an invalid number is entered the program should prompt the user to enter another number.*/
+            int totalNum = 0;
+   
+            Console.WriteLine("Enter five numbers : ");
+            int numOfnumbers = 5;
+    
+            for (int i = 0; i < numOfnumbers; i++)
+            {
+            Console.Write($"Enter {i + 1} number: ");
+            totalNum += Int32.Parse(Console.ReadLine());
+            }
+            Console.WriteLine("Sum of all numbers is {0}.",);
+            /*8. Write a program that reads five numbers from the console and prints the greatest of them.*/
+            Console.WriteLine("Enter a number :");
+            int intnum1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter a number :");
+            int intnum2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter a number :");
+            int intnum3 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter a number :");
+            int intnum4 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter a number :");
+            int intnum5 = Convert.ToInt32(Console.ReadLine());
+            if (intnum1 > intmum2 && intnum1 > intmum3 && intnum1 > intnum4 && intmum1 < intnum5 )
+            {
+                Console.WriteLine(intnum1);
+            }
+            else if (intnum2 > intmum1 && intnum2 > intmum3 && intnum2 > intnum4 && intmum2 < intnum5 )
+            {
+                Console.WriteLine(intmum2); 
+            }
+            else if (intnum3 > intmum1 && intnum3 > intmum2 && intnum3 > intnum4 && intmum3 < intnum5 )
+            {
+                Console.WriteLine(intnum3);
+            }
+            else if (intnum4 > intmum1 && intnum4 > intmum2 && intnum4 > intnum3 && intmum4 < intnum5 )
+            {
+                Console.WriteLine(intnum4);   
+            }
+            Console.WriteLine(intnum5);
+            /* 9. Write a program that reads an integer number n from the console. After that reads n numbers from the console and prints their sum.*/
+            Console.WriteLine("Enter your First Num:");
+            int firstNums = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter your Second Num:");
+            int secondNums = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter your Third Num:");
+            int thirdNums = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Your First Input is " + firstNums + ", Your second input is " + secondNums + ", Your Third input is " thirdNums );
+            int sum = firstNums + secondNums + thirdNums;
+            Console.WriteLine("The total sum of your input is " + sum);
+            /* 10. Write a program that reads an integer number n from the console and prints all numbers in the range [1…n], each on a separate line.*/
+            int total = 0;
+            Console.Write("Enter numbers count: ");
+            int lengthOfNum = Int32.Parse(Console.ReadLine());
+            for (int i = 0; i < lengthOfNum; i++)
+            {
+            Console.Write($"Enter {i + 1} number: ");
+            total += Int32.Parse(Console.ReadLine());
+            }
+            Console.WriteLine("Sum of all numbers is {total}.");
+            /* 11. Write a program that prints on the console the first 100 numbers in the Fibonacci sequence: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, …*/
+            Console.WriteLine("The Fibonacci sequence of 100 are : ");
+            ulong fib = 100;
+            ulong fib1 = 0;
+            ulong fib2 = 1;
+            Console.Write("{fib1} {fib2} "); 
+            for (ulong i2 = 2; i2 < fib; i2++)
+            {
+            ulong fab3 = fib1 + fib2;
+            Console.Write("{0} ", fab3);
+            fib1 = fib2;
+            fib2 = fab3;
+            }
+            Console.WriteLine();
+            /* 12. Write a program that calculates the sum (with precision of 0.001) of the following sequence: 1 + 1/2 - 1/3 + 1/4 - 1/5 + …*/
+            int numOne = 0;
+            int numTwo = 1;
+            int sumTwo = 1;
+            int counts = 0;   
+            Console.WriteLine(numTwo);   
+            while(counts < 100)
+            {
+            sumTwo = numone + numTwo;
+            numOne = numTwo;
+            numTwo = sumTwo;
+            Console.WriteLine(numTwo);
+            counts++;
+            }
+        }
+    }
+}
